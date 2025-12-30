@@ -1,0 +1,117 @@
+/* ============================================
+   APP LAYOUT - Premium Mission Control Structure
+   #0D0D0D base with three-column layout
+   ============================================ */
+
+.app {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--bg-base);
+  position: relative;
+  overflow: hidden;
+  /* Prism accent glow border */
+  border-top: 2px solid var(--accent-color, #FF9F43);
+  transition: border-color 0.6s ease;
+}
+
+/* Prism glow effect at top */
+.app::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: linear-gradient(180deg, var(--accent-glow, rgba(255, 159, 67, 0.15)), transparent);
+  pointer-events: none;
+  z-index: 0;
+  transition: background 0.6s ease;
+}
+
+/* Zen Mode Toggle Container */
+.zen-toggle-container {
+  position: fixed;
+  top: 20px;
+  right: 340px;
+  z-index: 100;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 1024px) {
+  .zen-toggle-container {
+    right: 20px;
+  }
+}
+
+/* Zen Mode Active State */
+.app.zen-active::before {
+  display: none;
+}
+
+.app.zen-active {
+  border-top-color: rgba(255, 255, 255, 0.1);
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  margin-left: 280px;
+  transition: margin-left 0.3s ease;
+  position: relative;
+  z-index: 1;
+  background: var(--bg-base);
+}
+
+.main-content.expanded {
+  margin-left: 72px;
+}
+
+/* Three-column layout for chat screen */
+.main-content.three-column {
+  display: flex;
+  flex-direction: row;
+}
+
+.main-content.three-column > *:first-child {
+  flex: 1;
+  min-width: 0;
+}
+
+@media (max-width: 1024px) {
+  .main-content.three-column {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+  }
+  
+  .main-content.expanded {
+    margin-left: 0;
+  }
+}
+
+/* ============================================
+   LIGHT MODE OVERRIDES
+   ============================================ */
+[data-theme="light"] .app {
+  background-color: #F8F9FB;
+}
+
+[data-theme="light"] .app::before {
+  background: linear-gradient(180deg, var(--accent-glow, rgba(255, 159, 67, 0.08)), transparent);
+}
+
+[data-theme="light"] .main-content {
+  background: #F8F9FB;
+}
+

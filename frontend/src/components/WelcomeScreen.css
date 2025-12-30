@@ -1,0 +1,732 @@
+/* ============================================
+   PREMIUM BENTO-STYLE ONBOARDING
+   NeuroFocus AI - ADHD Screening
+   ============================================ */
+
+/* Root variables for light/dark mode */
+:root[data-theme="dark"],
+html {
+  --bg-primary: #0D0D0D;
+  --bg-secondary: rgba(20, 20, 20, 0.95);
+  --bg-tertiary: rgba(255, 255, 255, 0.04);
+  --bg-light: rgba(255, 255, 255, 0.02);
+  --border-color: rgba(255, 255, 255, 0.12);
+  --border-light: rgba(255, 255, 255, 0.06);
+  --text-primary: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.6);
+  --text-muted: rgba(255, 255, 255, 0.35);
+  --glow-color: rgba(16, 185, 129, 0.1);
+}
+
+:root[data-theme="light"] {
+  --bg-primary: #F8F9FB;
+  --bg-secondary: rgba(255, 255, 255, 0.98);
+  --bg-tertiary: rgba(0, 0, 0, 0.04);
+  --bg-light: rgba(0, 0, 0, 0.02);
+  --border-color: rgba(0, 0, 0, 0.12);
+  --border-light: rgba(0, 0, 0, 0.06);
+  --text-primary: #1a1a1a;
+  --text-secondary: rgba(0, 0, 0, 0.6);
+  --text-muted: rgba(0, 0, 0, 0.35);
+  --glow-color: rgba(16, 185, 129, 0.1);
+}
+
+/* Base Screen - Deep Charcoal Background */
+.welcome-screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  padding: 24px;
+  background: var(--bg-primary);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: auto;
+  z-index: 1000;
+  transition: background 0.3s ease;
+}
+
+/* Subtle ambient glow */
+.welcome-screen::before {
+  content: '';
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.03) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* Premium Bento Modal - Centered */
+.welcome-modal {
+  max-width: 680px;
+  width: 100%;
+  margin: auto;
+  background: var(--bg-secondary);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--border-light);
+  border-radius: 20px;
+  overflow: visible;
+  position: relative;
+  z-index: 1;
+  box-shadow: 
+    0 0 0 1px var(--border-light),
+    0 24px 48px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+}
+
+/* ==========================================
+   PHASE MAP HEADER
+   ========================================== */
+.phase-map-header {
+  padding: 20px 28px 18px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02) 0%, transparent 100%);
+  border-bottom: 1px solid var(--border-light);
+  transition: all 0.3s ease;
+}
+
+.phase-map-label {
+  display: block;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  color: var(--text-muted);
+  text-align: center;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.phase-badges {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.phase-badge {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 12px;
+  background: rgba(255, 255, 255, 0.015);
+  border: 1.5px solid;
+  border-radius: 16px;
+  transition: all 0.25s ease;
+}
+
+.phase-badge-icon {
+  font-size: 13px;
+}
+
+.phase-badge-name {
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.85);
+  letter-spacing: 0.2px;
+}
+
+/* ==========================================
+   MAIN CONTENT AREA
+   ========================================== */
+.welcome-content {
+  padding: 32px 40px 40px;
+}
+
+/* Brand Section */
+.welcome-brand {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.brand-logo {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 90px;
+  height: 90px;
+  margin-bottom: 18px;
+}
+
+.logo-icon {
+  font-size: 42px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Logo bars - WelcomeScreen only (bigger version) */
+.welcome-modal .logo-bars {
+  display: flex;
+  gap: 8px;
+  align-items: flex-end;
+}
+
+.welcome-modal .logo-bar {
+  width: 10px;
+  height: 45px;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.welcome-modal .logo-bar.mid {
+  height: 30px;
+}
+
+.welcome-modal .brand-logo:hover .logo-bar {
+  transform: translateY(-2px);
+}
+
+.logo-pulse {
+  display: none;
+}
+
+@keyframes logoPulse {
+  0%, 100% { transform: scale(1); opacity: 0.4; }
+  50% { transform: scale(1.2); opacity: 0.6; }
+}
+
+.brand-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 8px 0;
+  letter-spacing: -0.5px;
+  background: linear-gradient(135deg, var(--text-primary) 0%, var(--text-secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.brand-subtitle {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin: 0;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+/* ==========================================
+   DUAL-CARD ROLE SELECTION
+   ========================================== */
+.role-selection {
+  margin-bottom: 28px;
+}
+
+.selection-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  margin: 0 0 14px 0;
+  letter-spacing: 0.5px;
+}
+
+.role-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.role-card {
+  position: relative;
+  padding: 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.role-card-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 24px 18px;
+  background: rgba(255, 255, 255, 0.015);
+  border: 1.5px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.role-card:hover .role-card-inner {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Parent Card - Purple Accent */
+.role-card[data-role="parent"].selected .role-card-inner {
+  background: rgba(139, 92, 246, 0.06);
+  border-color: rgba(139, 92, 246, 0.5);
+  box-shadow: 
+    0 0 0 1px rgba(139, 92, 246, 0.2),
+    0 6px 24px rgba(139, 92, 246, 0.1);
+}
+
+/* Student Card - Blue Accent */
+.role-card[data-role="student"].selected .role-card-inner {
+  background: rgba(59, 130, 246, 0.06);
+  border-color: rgba(59, 130, 246, 0.5);
+  box-shadow: 
+    0 0 0 1px rgba(59, 130, 246, 0.2),
+    0 6px 24px rgba(59, 130, 246, 0.1);
+}
+
+.role-check {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1.5px solid rgba(255, 255, 255, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+  z-index: 2;
+}
+
+.role-check svg {
+  width: 13px;
+  height: 13px;
+  color: #0D0D0D;
+}
+
+.role-card[data-role="parent"].selected .role-check {
+  background: #8B5CF6;
+  border-color: #8B5CF6;
+}
+
+.role-card[data-role="student"].selected .role-check {
+  background: #3B82F6;
+  border-color: #3B82F6;
+}
+
+.role-emoji {
+  font-size: 40px;
+  margin-bottom: 4px;
+}
+
+.role-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.2px;
+}
+
+.role-desc {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.45);
+  text-align: center;
+  line-height: 1.4;
+}
+
+/* ==========================================
+   FLOATING LABEL INPUTS
+   ========================================== */
+.input-section {
+  margin-bottom: 24px;
+}
+
+.input-row {
+  display: flex;
+  gap: 12px;
+}
+
+.floating-input {
+  flex: 1;
+  position: relative;
+}
+
+.floating-input-small {
+  flex: 0 0 110px;
+}
+
+.floating-input input {
+  width: 100%;
+  padding: 20px 14px 8px;
+  background: var(--bg-tertiary);
+  border: 1.5px solid var(--border-color);
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text-primary);
+  outline: none;
+  transition: all 0.25s ease;
+  box-sizing: border-box;
+}
+
+.floating-input input::placeholder {
+  color: transparent !important;
+}
+
+:root[data-theme="light"] .floating-input input::placeholder {
+  color: transparent !important;
+}
+
+.floating-input input::-webkit-outer-spin-button,
+.floating-input input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.floating-input input[type=number] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.floating-input label {
+  position: absolute;
+  left: 14px;
+  top: 14px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-muted);
+  pointer-events: none;
+  transition: all 0.25s ease;
+  z-index: 1;
+  transform: translateY(0);
+}
+
+.floating-input input:focus + label,
+.floating-input input:not(:placeholder-shown) + label {
+  top: 6px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  color: var(--text-secondary);
+  transform: translateY(-8px) scale(0.85);
+}
+
+/* Subtle Premium Focus State */
+.floating-input input:focus {
+  border-color: var(--text-secondary);
+  background: var(--bg-light);
+  box-shadow: 0 0 0 2px var(--glow-color);
+}
+
+.input-border {
+  display: none;
+}
+
+/* ==========================================
+   PREMIUM START BUTTON
+   ========================================== */
+.start-mission-btn {
+  width: 100%;
+  padding: 18px 28px;
+  background: #10B981;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-bottom: 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.start-mission-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.08) 0%, transparent 50%);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.start-mission-btn:hover:not(.disabled) {
+  transform: translateY(-2px);
+  box-shadow: 
+    0 6px 20px rgba(16, 185, 129, 0.25),
+    0 0 0 1px rgba(16, 185, 129, 0.3);
+}
+
+.start-mission-btn:hover:not(.disabled)::before {
+  opacity: 1;
+}
+
+.start-mission-btn:active:not(.disabled) {
+  transform: translateY(0);
+}
+
+.start-mission-btn.disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.btn-content,
+.btn-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btn-text {
+  font-size: 14px;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+}
+
+.btn-arrow {
+  width: 20px;
+  height: 20px;
+  color: #ffffff;
+  transition: transform 0.25s ease;
+}
+
+.start-mission-btn:hover:not(.disabled) .btn-arrow {
+  transform: translateX(3px);
+}
+
+.loading-spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.btn-loading {
+  font-size: 14px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.7);
+  letter-spacing: 2px;
+}
+
+/* ==========================================
+   STATUS BAR
+   ========================================== */
+.status-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.status-item {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 11px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.35);
+  letter-spacing: 0.3px;
+}
+
+.status-icon {
+  width: 16px;
+  height: 16px;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.status-divider {
+  width: 1px;
+  height: 14px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN
+   ========================================== */
+@media (max-width: 700px) {
+  .welcome-content {
+    padding: 32px 24px 36px;
+  }
+
+  .phase-badges {
+    gap: 6px;
+  }
+
+  .phase-badge {
+    padding: 6px 10px;
+  }
+
+  .phase-badge-name {
+    display: none;
+  }
+
+  .phase-badge-icon {
+    font-size: 16px;
+  }
+
+  .role-cards {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .role-card-inner {
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 20px;
+    gap: 16px;
+  }
+
+  .role-emoji {
+    font-size: 36px;
+    margin: 0;
+  }
+
+  .role-card-inner > :not(.role-check):not(.role-emoji) {
+    text-align: left;
+  }
+
+  .input-row {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .floating-input-small {
+    flex: 1;
+  }
+
+  .status-bar {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .status-divider {
+    display: none;
+  }
+}
+
+@media (max-width: 400px) {
+  .welcome-modal {
+    border-radius: 20px;
+  }
+
+  .brand-title {
+    font-size: 24px;
+  }
+
+  .btn-text {
+    font-size: 14px;
+    letter-spacing: 1.5px;
+  }
+}
+
+/* ==========================================
+   LIGHT MODE COMPONENT OVERRIDES
+   ========================================== */
+
+/* Welcome Screen Background */
+[data-theme="light"] .welcome-screen::before {
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.06) 0%, transparent 70%);
+}
+
+/* Modal Shadow */
+[data-theme="light"] .welcome-modal {
+  box-shadow: 
+    0 0 0 1px rgba(0, 0, 0, 0.08),
+    0 24px 48px rgba(0, 0, 0, 0.12);
+}
+
+/* Phase Map Header */
+[data-theme="light"] .phase-map-header {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.02) 0%, transparent 100%);
+}
+
+/* Selection Title */
+[data-theme="light"] .selection-title {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+/* Role Cards */
+[data-theme="light"] .role-card-inner {
+  background: rgba(0, 0, 0, 0.02);
+  border: 1.5px solid rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .role-card:hover .role-card-inner {
+  background: rgba(0, 0, 0, 0.04);
+  border-color: rgba(0, 0, 0, 0.18);
+}
+
+[data-theme="light"] .role-title {
+  color: #1a1a1a;
+}
+
+[data-theme="light"] .role-desc {
+  color: rgba(0, 0, 0, 0.55);
+}
+
+[data-theme="light"] .role-check {
+  background: rgba(0, 0, 0, 0.03);
+  border: 1.5px solid rgba(0, 0, 0, 0.15);
+}
+
+[data-theme="light"] .role-check svg {
+  color: #ffffff;
+}
+
+/* Parent Card Selected */
+[data-theme="light"] .role-card[data-role="parent"].selected .role-card-inner {
+  background: rgba(139, 92, 246, 0.08);
+  border-color: rgba(139, 92, 246, 0.5);
+  box-shadow: 
+    0 0 0 1px rgba(139, 92, 246, 0.2),
+    0 6px 24px rgba(139, 92, 246, 0.12);
+}
+
+/* Student Card Selected */
+[data-theme="light"] .role-card[data-role="student"].selected .role-card-inner {
+  background: rgba(59, 130, 246, 0.08);
+  border-color: rgba(59, 130, 246, 0.5);
+  box-shadow: 
+    0 0 0 1px rgba(59, 130, 246, 0.2),
+    0 6px 24px rgba(59, 130, 246, 0.12);
+}
+
+/* Status Items */
+[data-theme="light"] .status-item {
+  color: rgba(0, 0, 0, 0.45);
+}
+
+[data-theme="light"] .status-icon {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="light"] .status-divider {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+/* Start Button Disabled State */
+[data-theme="light"] .start-mission-btn.disabled {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+/* Phase Badges */
+[data-theme="light"] .phase-badge {
+  background: rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] .phase-badge-name {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+/* Brand Title Gradient - needs special handling */
+[data-theme="light"] .brand-title {
+  background: linear-gradient(135deg, #1a1a1a 0%, rgba(0, 0, 0, 0.7) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}

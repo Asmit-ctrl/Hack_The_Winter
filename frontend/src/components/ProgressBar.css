@@ -1,0 +1,345 @@
+/* ============================================
+   PROGRESS BAR - Premium Bento Box Design
+   #151515 panel with glow effects on phases
+   ============================================ */
+
+.progress-sidebar {
+  width: 260px;
+  height: 100%;
+  background: var(--bg-panel);
+  border-left: 1px solid var(--border-subtle);
+  display: flex;
+  flex-direction: column;
+}
+
+.progress-scroll-area {
+  flex: 1;
+  overflow-y: auto;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Custom scrollbar */
+.progress-scroll-area::-webkit-scrollbar {
+  width: 4px;
+}
+
+.progress-scroll-area::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.progress-scroll-area::-webkit-scrollbar-thumb {
+  background: var(--border-subtle);
+  border-radius: 4px;
+}
+
+/* ============================================
+   Progress Ring - Premium Design
+   ============================================ */
+.progress-ring-container {
+  display: flex;
+  justify-content: center;
+  padding: 8px 0 24px;
+}
+
+.circular-progress {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.progress-ring {
+  transform: rotate(-90deg);
+}
+
+.progress-ring-bg {
+  stroke: var(--border-subtle);
+}
+
+.progress-ring-fill {
+  transition: stroke-dashoffset 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  /* Clean stroke without scattered glow */
+}
+
+.progress-center {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.progress-value {
+  font-size: 22px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.progress-label {
+  font-size: 9px;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 3px;
+}
+
+/* ============================================
+   Section Label
+   ============================================ */
+.progress-section-label {
+  margin-bottom: 16px;
+}
+
+.progress-section-label span {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+/* ============================================
+   Phase List - Premium Timeline
+   ============================================ */
+.phase-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.phase-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  position: relative;
+  padding-bottom: 18px;
+}
+
+.phase-item:last-child {
+  padding-bottom: 0;
+}
+
+.phase-item-line {
+  position: absolute;
+  left: 13px;
+  top: 30px;
+  bottom: 0;
+  width: 2px;
+}
+
+.connector-line {
+  width: 100%;
+  height: 100%;
+  border-radius: 1px;
+  transition: background 0.3s ease;
+}
+
+/* ============================================
+   Phase Circle - Clean Premium Design
+   Now with Phase Icons (emoji)
+   ============================================ */
+.phase-item-circle {
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  border-radius: 50%;
+  border: 2px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 800;
+  background: var(--bg-card);
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.phase-item-circle svg {
+  width: 14px;
+  height: 14px;
+}
+
+.phase-item-circle .phase-icon {
+  font-size: 14px;
+  line-height: 1;
+}
+
+.phase-item-info {
+  display: flex;
+  flex-direction: column;
+  padding-top: 4px;
+  min-width: 0;
+}
+
+.phase-item-name {
+  font-size: 13px;
+  font-weight: 700;
+  transition: color 0.3s ease;
+  line-height: 1.3;
+}
+
+.phase-item-status {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 3px;
+}
+
+/* ============================================
+   Current Phase Summary - Bento Box Card
+   ============================================ */
+.current-phase-summary {
+  margin-top: auto;
+  padding: 16px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+}
+
+.summary-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.summary-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  animation: summaryPulse 2s ease-in-out infinite;
+}
+
+@keyframes summaryPulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.2);
+  }
+}
+
+.summary-label {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.summary-name {
+  display: block;
+  font-size: 16px;
+  font-weight: 900;
+  margin-bottom: 6px;
+  line-height: 1.2;
+}
+
+.summary-desc {
+  display: block;
+  font-size: 12px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* ============================================
+   Responsive
+   ============================================ */
+@media (max-width: 1100px) {
+  .progress-sidebar {
+    width: 220px;
+  }
+  
+  .progress-scroll-area {
+    padding: 20px 16px;
+  }
+  
+  .phase-item-circle {
+    width: 28px;
+    height: 28px;
+    min-width: 28px;
+    font-size: 11px;
+  }
+  
+  .phase-item-line {
+    left: 13px;
+  }
+  
+  .phase-item-name {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 900px) {
+  .progress-sidebar {
+    display: none;
+  }
+}
+
+/* ============================================
+   LIGHT MODE OVERRIDES
+   ============================================ */
+[data-theme="light"] .progress-sidebar {
+  background: rgba(255, 255, 255, 0.95);
+  border-left-color: rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] .progress-scroll-area::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.15);
+}
+
+[data-theme="light"] .progress-ring-bg {
+  stroke: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .progress-value {
+  color: #1a1a1a;
+}
+
+[data-theme="light"] .progress-label {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="light"] .progress-section-label span {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="light"] .phase-item-circle {
+  background: rgba(0, 0, 0, 0.05);
+  border-color: rgba(0, 0, 0, 0.15);
+  color: rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="light"] .phase-item-name {
+  color: #1a1a1a;
+}
+
+[data-theme="light"] .phase-item-line {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .summary-card {
+  background: rgba(255, 255, 255, 0.9);
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .summary-label {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="light"] .summary-name {
+  color: #1a1a1a;
+}
+
+[data-theme="light"] .summary-desc {
+  color: rgba(0, 0, 0, 0.6);
+}
+

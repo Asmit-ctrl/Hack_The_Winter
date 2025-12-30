@@ -1,0 +1,626 @@
+/* ============================================
+   CHAT AREA - Premium Bento Box Design
+   #0D0D0D base with colored message accents
+   Prism Phase Color Integration
+   ============================================ */
+
+.chat-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  background: var(--bg-base);
+}
+
+/* Subtle accent glow at top */
+.chat-area::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 150px;
+  background: linear-gradient(180deg, var(--accent-bg, rgba(255, 159, 67, 0.08)), transparent);
+  pointer-events: none;
+  z-index: 0;
+  transition: background 0.6s ease;
+}
+
+.messages-container {
+  flex: 1;
+  overflow-y: auto;
+  padding: 24px 40px 32px;
+  padding-top: 100px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Custom scrollbar */
+.messages-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.messages-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.messages-container::-webkit-scrollbar-thumb {
+  background: var(--border-subtle);
+  border-radius: 4px;
+}
+
+.messages-container::-webkit-scrollbar-thumb:hover {
+  background: var(--border-visible);
+}
+
+.messages-list {
+  max-width: 720px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ============================================
+   Message Base Styles
+   ============================================ */
+.message {
+  display: flex;
+  animation: messageIn 0.3s ease forwards;
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+@keyframes messageIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============================================
+   User Messages - Right Aligned with Blue Accent
+   ============================================ */
+.message.user {
+  justify-content: flex-end;
+}
+
+.message.user .message-body {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 16px;
+  border-bottom-right-radius: 4px;
+  padding: 16px 20px;
+  max-width: 70%;
+  order: 1;
+}
+
+.message-accent-user {
+  width: 4px;
+  border-radius: 4px;
+  flex-shrink: 0;
+  margin-left: 12px;
+  order: 2;
+}
+
+/* ============================================
+   Assistant Messages - Left Aligned with Phase Color
+   ============================================ */
+.message.assistant {
+  display: flex;
+  gap: 0;
+  justify-content: flex-start;
+}
+
+.message-accent {
+  width: 4px;
+  border-radius: 4px;
+  flex-shrink: 0;
+  margin-right: 14px;
+}
+
+.message.assistant .message-body {
+  background: var(--bg-panel);
+  border: 1px solid var(--border-subtle);
+  border-radius: 16px;
+  border-top-left-radius: 4px;
+  padding: 16px 20px;
+  max-width: 70%;
+}
+
+/* ============================================
+   Message Content
+   ============================================ */
+.message-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.message-sender {
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.message-time {
+  font-size: 11px;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.message-text {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+.message.assistant .message-text {
+  color: var(--text-primary);
+}
+
+/* ============================================
+   PREMIUM Typing Indicator - Color-blocked Border
+   Matches AI chat bubbles with phase color accent
+   ============================================ */
+.typing-container {
+  display: flex;
+  gap: 0;
+  animation: messageIn 0.3s ease forwards;
+  margin-bottom: 8px;
+}
+
+.typing-color-block {
+  width: 4px;
+  border-radius: 4px;
+  flex-shrink: 0;
+  margin-right: 14px;
+  animation: colorPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes colorPulse {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+.typing-content {
+  background: var(--bg-panel);
+  border: 1px solid var(--border-subtle);
+  border-radius: 16px;
+  border-top-left-radius: 4px;
+  padding: 14px 20px;
+  min-width: 120px;
+}
+
+.typing-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.typing-icon {
+  font-size: 16px;
+}
+
+.typing-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.typing-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.typing-dots span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  animation: typingBounce 1.4s ease-in-out infinite;
+}
+
+.typing-dots span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.typing-dots span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+/* ============================================
+   Input Container - Premium Design
+   ============================================ */
+.input-container {
+  padding: 0 40px 32px;
+  background: var(--bg-base);
+}
+
+/* ============================================
+   PRISM BAR - Rainbow Header on Input
+   This is the signature "premium" touch
+   ============================================ */
+.prism-bar {
+  display: flex;
+  height: 3px;
+  border-radius: 3px 3px 0 0;
+  overflow: hidden;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.prism-segment {
+  flex: 1;
+}
+
+.input-form {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.input-wrapper {
+  background: var(--bg-panel);
+  border: 1px solid var(--border-subtle);
+  border-top: none;
+  border-radius: 0 0 16px 16px;
+  padding: 16px 20px;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: flex-end;
+  gap: 14px;
+}
+
+.input-wrapper:focus-within {
+  border-color: var(--accent-color, var(--border-visible));
+  background: var(--bg-card);
+  box-shadow: 0 0 20px var(--accent-glow, rgba(255, 159, 67, 0.15));
+}
+
+.input-wrapper textarea {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+  font-size: 14px;
+  line-height: 1.6;
+  resize: none;
+  font-family: inherit;
+  max-height: 150px;
+  min-height: 24px;
+}
+
+.input-wrapper textarea::placeholder {
+  color: var(--text-muted);
+}
+
+.input-wrapper textarea:focus {
+  outline: none;
+}
+
+.input-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.send-btn {
+  width: 42px;
+  height: 42px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  color: var(--text-muted);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.send-btn.active {
+  border: none;
+  color: #000;
+  box-shadow: 0 4px 16px var(--accent-glow, rgba(0, 0, 0, 0.3));
+}
+
+.send-btn.active:hover {
+  transform: scale(1.05);
+}
+
+.send-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.send-btn svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* ============================================
+   BENTO BOX Dynamic Hint System
+   Glowing hint box with phase-colored accent
+   ============================================ */
+.hint-bento-box {
+  max-width: 720px;
+  margin: 16px auto 0;
+  background: var(--bg-panel);
+  border: 1px solid;
+  border-radius: 14px;
+  padding: 14px 18px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 8px var(--hint-glow-color, rgba(84, 160, 255, 0.08));
+  animation: hintFadeIn 0.4s ease;
+}
+
+@keyframes hintFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hint-bento-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--hint-glow-color);
+  opacity: 0.3;
+}
+
+.hint-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.hint-icon {
+  font-size: 14px;
+}
+
+.hint-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  flex: 1;
+}
+
+.hint-phase-tag {
+  font-size: 10px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 6px;
+}
+
+.hint-text {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin: 0;
+  font-style: italic;
+}
+
+/* ============================================
+   End Session Button
+   ============================================ */
+.end-session-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 16px;
+  padding: 14px 28px;
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.end-session-btn:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+.end-session-btn.complete {
+  background: linear-gradient(135deg, #1DD1A1 0%, #54A0FF 100%);
+  border: none;
+  color: #ffffff;
+}
+
+.end-session-btn.complete:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(29, 209, 161, 0.3);
+}
+
+.end-session-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.end-icon {
+  font-size: 16px;
+}
+
+/* ============================================
+   Responsive Design
+   ============================================ */
+@media (max-width: 768px) {
+  .messages-container {
+    padding: 20px 20px;
+    padding-top: 90px;
+  }
+  
+  .input-container {
+    padding: 0 20px 24px;
+  }
+  
+  .message.user .message-body,
+  .message.assistant .message-body {
+    max-width: 85%;
+    padding: 14px 16px;
+  }
+  
+  .message-text {
+    font-size: 13px;
+  }
+  
+  .message-accent,
+  .message-accent-user {
+    width: 3px;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .messages-container {
+    padding: 16px 16px;
+    padding-top: 80px;
+  }
+  
+  .input-container {
+    padding: 0 16px 20px;
+  }
+  
+  .message.user .message-body,
+  .message.assistant .message-body {
+    max-width: 90%;
+    padding: 12px 14px;
+  }
+  
+  .input-wrapper {
+    padding: 14px 16px;
+  }
+  
+  .prism-bar {
+    height: 2px;
+  }
+}
+
+/* ============================================
+   LIGHT MODE OVERRIDES
+   ============================================ */
+[data-theme="light"] .chat-area {
+  background: #F5F5F7;
+}
+
+[data-theme="light"] .chat-area::before {
+  background: linear-gradient(180deg, rgba(255, 159, 67, 0.05), transparent);
+}
+
+[data-theme="light"] .message.assistant .message-body {
+  background: #FFFFFF;
+  border-color: rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+[data-theme="light"] .message.user .message-body {
+  background: #F0F0F4;
+  border-color: rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="light"] .message-text {
+  color: #1A1A2E;
+}
+
+[data-theme="light"] .message.assistant .message-text {
+  color: #1A1A2E;
+}
+
+[data-theme="light"] .message-sender {
+  color: #1A1A2E;
+}
+
+[data-theme="light"] .message-time {
+  color: #7A7A8A;
+}
+
+[data-theme="light"] .typing-content {
+  background: #FFFFFF;
+  border-color: rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+[data-theme="light"] .typing-label {
+  color: #7A7A8A;
+}
+
+[data-theme="light"] .input-container {
+  background: #F5F5F7;
+}
+
+[data-theme="light"] .input-wrapper {
+  background: #FFFFFF;
+  border-color: rgba(0, 0, 0, 0.12);
+}
+
+[data-theme="light"] .input-wrapper:focus-within {
+  border-color: var(--accent-color);
+  background: #FFFFFF;
+  box-shadow: 0 0 0 3px rgba(255, 159, 67, 0.12);
+}
+
+[data-theme="light"] .input-wrapper textarea {
+  color: #1A1A2E;
+}
+
+[data-theme="light"] .input-wrapper textarea::placeholder {
+  color: #9A9AAA;
+}
+
+[data-theme="light"] .send-btn {
+  background: #F5F5F7;
+  border-color: rgba(0, 0, 0, 0.1);
+  color: #7A7A8A;
+}
+
+[data-theme="light"] .send-btn.active {
+  color: #FFFFFF;
+}
+
+[data-theme="light"] .hint-bento-box {
+  background: #FFFFFF;
+  border-color: rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+[data-theme="light"] .hint-label {
+  color: #7A7A8A;
+}
+
+[data-theme="light"] .hint-text {
+  color: #4A4A5A;
+}
+
+[data-theme="light"] .end-session-btn {
+  background: #FFFFFF;
+  border-color: rgba(0, 0, 0, 0.12);
+  color: #4A4A5A;
+}
+
+[data-theme="light"] .end-session-btn:hover {
+  background: #F5F5F7;
+  border-color: rgba(0, 0, 0, 0.2);
+  color: #1A1A2E;
+}

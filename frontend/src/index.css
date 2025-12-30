@@ -1,0 +1,356 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Premium Dark Base */
+  --bg-base: #0D0D0D;
+  --bg-panel: #151515;
+  --bg-card: #1C1C1C;
+  --bg-elevated: #222222;
+  
+  /* Borders */
+  --border-subtle: rgba(255, 255, 255, 0.05);
+  --border-light: rgba(255, 255, 255, 0.1);
+  
+  /* Text */
+  --text-primary: #FFFFFF;
+  --text-secondary: #B0B0B0;
+  --text-muted: #666666;
+  
+  /* Rainbow Prism Colors */
+  --prism-red: #FF5F5F;
+  --prism-orange: #FF9F43;
+  --prism-yellow: #FECA57;
+  --prism-green: #1DD1A1;
+  --prism-blue: #54A0FF;
+  --prism-purple: #A29BFE;
+  
+  /* Dynamic Accent Color (Updated by Phase) */
+  --accent-color: #FF9F43;
+  --accent-glow: rgba(255, 159, 67, 0.3);
+  --accent-bg: rgba(255, 159, 67, 0.1);
+  
+  /* Shadows */
+  --shadow-green: rgba(29, 209, 161, 0.15);
+  --shadow-red: rgba(255, 95, 95, 0.2);
+}
+
+/* Light Theme - Comprehensive */
+[data-theme="light"] {
+  /* Base backgrounds */
+  --bg-base: #F5F5F7;
+  --bg-panel: #FFFFFF;
+  --bg-card: #FFFFFF;
+  --bg-elevated: #FAFAFA;
+  
+  /* Borders - more visible for light mode */
+  --border-subtle: rgba(0, 0, 0, 0.08);
+  --border-light: rgba(0, 0, 0, 0.12);
+  --border-visible: rgba(0, 0, 0, 0.15);
+  
+  /* Text - darker for readability */
+  --text-primary: #1A1A2E;
+  --text-secondary: #4A4A5A;
+  --text-muted: #7A7A8A;
+  
+  /* Shadows for light mode */
+  --shadow-green: rgba(29, 209, 161, 0.2);
+  --shadow-red: rgba(255, 95, 95, 0.15);
+  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.08);
+  
+  /* Accent adjustments for light mode */
+  --accent-glow: rgba(255, 159, 67, 0.15);
+  --accent-bg: rgba(255, 159, 67, 0.08);
+  
+  /* Input specific */
+  --input-bg: #FFFFFF;
+  --input-border: rgba(0, 0, 0, 0.15);
+  --input-text: #1A1A2E;
+  --input-placeholder: #9A9AAA;
+}
+
+/* Light mode component overrides */
+[data-theme="light"] .sidebar {
+  background: #FFFFFF;
+  border-right-color: rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="light"] .condition-selector {
+  background: #F8F8FA;
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .condition-selector:hover {
+  background: #F0F0F4;
+  border-color: rgba(0, 0, 0, 0.15);
+}
+
+[data-theme="light"] .condition-dropdown {
+  background: #FFFFFF;
+  border-color: rgba(0, 0, 0, 0.12);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .condition-option:hover {
+  background: #F5F5F7;
+}
+
+[data-theme="light"] .mission-item:hover {
+  background: #F5F5F7;
+}
+
+[data-theme="light"] .mission-item.active {
+  background: #F0F0F4;
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .user-card {
+  background: #F8F8FA;
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .theme-btn {
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .theme-btn:hover {
+  background: #F5F5F7;
+  border-color: var(--prism-yellow);
+}
+
+[data-theme="light"] .collapse-btn {
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .collapse-btn:hover {
+  background: #F5F5F7;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Chat area light mode */
+[data-theme="light"] .chat-area {
+  background: #F5F5F7;
+}
+
+[data-theme="light"] .message.assistant {
+  background: #FFFFFF;
+  border-color: rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="light"] .message.user {
+  background: #F0F0F4;
+  border-color: rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="light"] .message-text {
+  color: #1A1A2E;
+}
+
+[data-theme="light"] .message-time,
+[data-theme="light"] .message-sender {
+  color: #7A7A8A;
+}
+
+[data-theme="light"] .input-wrapper {
+  background: #FFFFFF;
+  border-color: rgba(0, 0, 0, 0.15);
+}
+
+[data-theme="light"] .input-wrapper:focus-within {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px rgba(255, 159, 67, 0.15);
+}
+
+[data-theme="light"] .input-wrapper textarea {
+  color: #1A1A2E;
+  background: transparent;
+}
+
+[data-theme="light"] .input-wrapper textarea::placeholder {
+  color: #9A9AAA;
+}
+
+/* Hint box light mode */
+[data-theme="light"] .hint-bento-box {
+  background: #FFFFFF;
+  border-color: rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="light"] .hint-text {
+  color: #4A4A5A;
+}
+
+/* Mission Map light mode */
+[data-theme="light"] .mission-map {
+  background: #1A1A2E;
+  color: #FFFFFF;
+}
+
+/* Welcome screen light mode */
+[data-theme="light"] .welcome-screen {
+  background: #F5F5F7;
+}
+
+[data-theme="light"] .welcome-modal {
+  background: #FFFFFF;
+  border-color: rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .brand-title {
+  color: #1A1A2E;
+}
+
+[data-theme="light"] .brand-subtitle {
+  color: #7A7A8A;
+}
+
+[data-theme="light"] .selection-title {
+  color: #1A1A2E;
+}
+
+[data-theme="light"] .role-card {
+  background: #F8F8FA;
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .role-card:hover {
+  background: #F0F0F4;
+  border-color: rgba(0, 0, 0, 0.15);
+}
+
+[data-theme="light"] .role-card.selected {
+  background: #F0F0F4;
+  border-color: var(--prism-green);
+}
+
+[data-theme="light"] .role-title {
+  color: #1A1A2E;
+}
+
+[data-theme="light"] .role-desc {
+  color: #7A7A8A;
+}
+
+[data-theme="light"] .floating-input input {
+  background: #FFFFFF;
+  border-color: rgba(0, 0, 0, 0.15);
+  color: #1A1A2E;
+}
+
+[data-theme="light"] .floating-input label {
+  color: #7A7A8A;
+  background: #FFFFFF;
+}
+
+[data-theme="light"] .floating-input.focused input,
+[data-theme="light"] .floating-input input:focus {
+  border-color: var(--prism-orange);
+  box-shadow: 0 0 0 3px rgba(255, 159, 67, 0.15);
+}
+
+[data-theme="light"] .floating-input.focused label {
+  color: var(--prism-orange);
+}
+
+[data-theme="light"] .status-item {
+  color: #7A7A8A;
+}
+
+[data-theme="light"] .phase-badge {
+  background: #F8F8FA;
+}
+
+[data-theme="light"] .phase-badge-name {
+  color: #4A4A5A;
+}
+
+/* Results screen light mode */
+[data-theme="light"] .results-screen {
+  background: #F5F5F7;
+}
+
+[data-theme="light"] .results-container {
+  background: #FFFFFF;
+}
+
+[data-theme="light"] .results-header h1 {
+  color: #1A1A2E;
+}
+
+[data-theme="light"] .disclaimer-box {
+  background: #FFF9E6;
+  border-color: rgba(254, 202, 87, 0.3);
+}
+
+/* Typing indicator light mode */
+[data-theme="light"] .typing-container {
+  background: #FFFFFF;
+  border-color: rgba(0, 0, 0, 0.08);
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--bg-base);
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-light);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+/* Selection */
+::selection {
+  background: var(--prism-purple);
+  color: white;
+}
+
+/* Focus */
+*:focus {
+  outline: none;
+}
+
+*:focus-visible {
+  outline: 2px solid var(--prism-blue);
+  outline-offset: 2px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(1.1); }
+}
+
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 15px var(--shadow-red); }
+  50% { box-shadow: 0 0 25px var(--shadow-red); }
+}

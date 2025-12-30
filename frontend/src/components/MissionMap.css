@@ -1,0 +1,417 @@
+/* Mission Map - Right Sidebar with Prism Phase Colors */
+
+.mission-map {
+  width: 320px;
+  min-width: 320px;
+  height: 100vh;
+  background: linear-gradient(180deg, rgba(18, 18, 22, 0.98), rgba(13, 13, 15, 0.99));
+  border-left: 1px solid rgba(255, 255, 255, 0.06);
+  display: flex;
+  flex-direction: column;
+  padding: 24px 20px;
+  gap: 24px;
+  overflow-y: auto;
+  position: relative;
+}
+
+/* Accent glow on left border */
+.mission-map::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    transparent,
+    var(--map-accent, #FF9F43),
+    transparent
+  );
+  opacity: 0.6;
+}
+
+/* Completion Ring */
+.completion-ring-container {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 8px;
+}
+
+.completion-ring {
+  width: 100%;
+  height: 100%;
+}
+
+.completion-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.completion-value {
+  display: block;
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--text-primary);
+  font-family: 'SF Mono', 'Monaco', 'Consolas', monospace;
+}
+
+.completion-label {
+  display: block;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+/* Section Header */
+.map-section-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.map-section-icon {
+  font-size: 14px;
+}
+
+.map-section-title {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--text-muted);
+}
+
+/* Phase List */
+.phase-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.phase-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.phase-item.active {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.phase-item.completed {
+  opacity: 0.7;
+}
+
+.phase-item.locked {
+  opacity: 0.4;
+}
+
+/* Phase Indicator */
+.phase-indicator {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.phase-item.active .phase-indicator {
+  border-color: var(--phase-color);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 15px var(--phase-color);
+}
+
+.phase-item.completed .phase-indicator {
+  border-color: var(--prism-green);
+  background: rgba(29, 209, 161, 0.15);
+}
+
+.phase-icon {
+  font-size: 14px;
+  display: none;
+}
+
+.phase-check {
+  color: var(--prism-green);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.phase-lock {
+  color: var(--text-muted);
+  font-size: 10px;
+}
+
+/* Phase Info */
+.phase-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.phase-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary);
+  transition: color 0.3s ease;
+}
+
+.phase-item.active .phase-name {
+  color: var(--phase-color);
+}
+
+.phase-item.locked .phase-name {
+  color: var(--text-muted);
+}
+
+.phase-status {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--phase-color);
+  text-transform: uppercase;
+}
+
+/* Active Phase Pulse */
+.phase-pulse {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 24px;
+  border-radius: 2px;
+  animation: phasePulse 2s ease-in-out infinite;
+}
+
+@keyframes phasePulse {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+/* Current Phase Card */
+.current-phase-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid;
+  border-radius: 16px;
+  padding: 20px;
+  margin-top: auto;
+}
+
+.current-phase-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.badge-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  animation: badgePulse 1.5s ease-in-out infinite;
+}
+
+@keyframes badgePulse {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+.badge-text {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: var(--text-muted);
+}
+
+.current-phase-name {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+  transition: color 0.3s ease;
+}
+
+.current-phase-desc {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Session Stats */
+.session-stats {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 12px;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.stat-value {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--text-primary);
+  font-family: 'SF Mono', 'Monaco', 'Consolas', monospace;
+}
+
+.stat-label {
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.stat-divider {
+  width: 1px;
+  height: 32px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Mobile Responsive */
+@media (max-width: 1200px) {
+  .mission-map {
+    width: 280px;
+    min-width: 280px;
+    padding: 20px 16px;
+  }
+  
+  .completion-ring-container {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .completion-value {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .mission-map {
+    display: none;
+  }
+}
+
+/* ==========================================
+   LIGHT MODE OVERRIDES
+   ========================================== */
+[data-theme="light"] .mission-map {
+  background: linear-gradient(180deg, rgba(248, 249, 251, 0.98), rgba(243, 244, 246, 0.99));
+  border-left: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] .mission-map::before {
+  background: linear-gradient(
+    180deg,
+    transparent,
+    rgba(255, 159, 67, 0.5),
+    transparent
+  );
+  opacity: 0.4;
+}
+
+[data-theme="light"] .completion-value {
+  color: #1a1a1a;
+}
+
+[data-theme="light"] .completion-label {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="light"] .map-section-header {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] .map-section-title {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="light"] .phase-item.active {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+[data-theme="light"] .phase-indicator {
+  background: rgba(0, 0, 0, 0.05);
+  border: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .phase-item.active .phase-indicator {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] .phase-item.completed .phase-indicator {
+  background: rgba(29, 209, 161, 0.15);
+}
+
+[data-theme="light"] .phase-lock {
+  color: rgba(0, 0, 0, 0.35);
+}
+
+[data-theme="light"] .phase-name {
+  color: #1a1a1a;
+}
+
+[data-theme="light"] .phase-item.locked .phase-name {
+  color: rgba(0, 0, 0, 0.35);
+}
+
+[data-theme="light"] .current-phase-card {
+  background: rgba(255, 255, 255, 0.8);
+  border-color: rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="light"] .badge-text {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="light"] .current-phase-name {
+  color: #1a1a1a;
+}
+
+[data-theme="light"] .current-phase-desc {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+[data-theme="light"] .session-stats {
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="light"] .stat-value {
+  color: #1a1a1a;
+}
+
+[data-theme="light"] .stat-label {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="light"] .stat-divider {
+  background: rgba(0, 0, 0, 0.1);
+}

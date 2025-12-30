@@ -1,0 +1,169 @@
+/* ============================================
+   PHASE INDICATOR - Premium Popup Design
+   Dark panel with color accent bar and glow
+   ============================================ */
+
+.phase-indicator {
+  position: fixed;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10000;
+  animation: popupFadeSlide 0.4s ease-out forwards;
+}
+
+@keyframes popupFadeSlide {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+.phase-content {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 22px 18px 28px;
+  background: var(--bg-panel);
+  border: 1px solid var(--border-visible);
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.5);
+  min-width: 340px;
+  white-space: nowrap;
+}
+
+/* Colored accent bar on the left */
+.phase-color-bar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 5px;
+}
+
+.phase-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding-left: 4px;
+}
+
+.phase-label {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 6px;
+}
+
+.phase-name {
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 1.2;
+  margin-bottom: 4px;
+}
+
+.phase-description {
+  font-size: 12px;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+.phase-close {
+  width: 32px;
+  height: 32px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 10px;
+  color: var(--text-muted);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.phase-close:hover {
+  background: var(--bg-base);
+  color: var(--text-primary);
+  border-color: var(--border-visible);
+}
+
+.phase-close svg {
+  width: 14px;
+  height: 14px;
+}
+
+/* ============================================
+   Responsive
+   ============================================ */
+@media (max-width: 600px) {
+  .phase-indicator {
+    top: 12px;
+    left: 12px;
+    right: 12px;
+    transform: none;
+    animation: popupFadeMobile 0.4s ease-out forwards;
+  }
+  
+  @keyframes popupFadeMobile {
+    0% {
+      opacity: 0;
+      transform: translateY(-15px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .phase-content {
+    min-width: auto;
+    padding: 16px 18px 16px 24px;
+  }
+  
+  .phase-name {
+    font-size: 16px;
+  }
+}
+
+/* ============================================
+   LIGHT MODE OVERRIDES
+   ============================================ */
+[data-theme="light"] .phase-content {
+  background: rgba(255, 255, 255, 0.98);
+  border-color: rgba(0, 0, 0, 0.12);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.15);
+}
+
+[data-theme="light"] .phase-label {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="light"] .phase-name {
+  color: #1a1a1a;
+}
+
+[data-theme="light"] .phase-description {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+[data-theme="light"] .phase-close {
+  background: rgba(0, 0, 0, 0.05);
+  border-color: rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="light"] .phase-close:hover {
+  background: rgba(0, 0, 0, 0.1);
+  color: #1a1a1a;
+  border-color: rgba(0, 0, 0, 0.15);
+}

@@ -1,0 +1,592 @@
+/* ============================================
+   SIDEBAR - Premium Bento Box Design
+   Dark depth #151515 panel with subtle borders
+   ============================================ */
+
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 280px;
+  height: 100vh;
+  background: var(--bg-panel);
+  border-right: 1px solid var(--border-subtle);
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+  transition: width 0.3s ease;
+  padding: 20px;
+}
+
+.sidebar.collapsed {
+  width: 72px;
+  padding: 16px;
+}
+
+/* ============================================
+   Header & Logo - Premium Typography
+   ============================================ */
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.logo-bars {
+  display: flex;
+  gap: 4px;
+  align-items: flex-end;
+}
+
+.logo-bar {
+  width: 4px;
+  height: 18px;
+  border-radius: 2px;
+}
+
+.logo-bar.mid {
+  height: 14px;
+}
+
+.logo-text {
+  font-size: 18px;
+  font-weight: 900;
+  color: var(--text-primary);
+  letter-spacing: -0.5px;
+  margin: 0;
+}
+
+.collapse-btn {
+  width: 32px;
+  height: 32px;
+  background: transparent;
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  color: var(--text-muted);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.collapse-btn:hover {
+  border-color: var(--border-visible);
+  color: var(--text-primary);
+  background: var(--bg-card);
+}
+
+.collapse-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* ============================================
+   New Mission Button - Premium Green CTA
+   Full width, solid green with glow shadow
+   ============================================ */
+.new-mission-btn {
+  width: 100%;
+  background: var(--prism-green);
+  border: none;
+  border-radius: 12px;
+  padding: 14px 18px;
+  color: #000;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.2s ease;
+  margin-bottom: 20px;
+  box-shadow: var(--shadow-green);
+}
+
+.new-mission-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 32px rgba(29, 209, 161, 0.4);
+}
+
+.new-mission-btn span {
+  font-weight: 700;
+}
+
+.new-mission-btn svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* ============================================
+   Condition Selector - Bento Box Card
+   ============================================ */
+.condition-selector {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  padding: 14px 16px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s ease;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.condition-selector:hover {
+  border-color: var(--border-visible);
+  background: rgba(28, 28, 28, 0.8);
+}
+
+.condition-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.condition-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.condition-name {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.condition-desc {
+  display: block;
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.dropdown-icon {
+  width: 16px;
+  height: 16px;
+  color: var(--text-muted);
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+.dropdown-icon.open {
+  transform: rotate(180deg);
+}
+
+.condition-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  right: 0;
+  background: var(--bg-card);
+  border: 1px solid var(--border-visible);
+  border-radius: 12px;
+  overflow: hidden;
+  z-index: 10;
+  animation: dropdownFade 0.2s ease;
+}
+
+@keyframes dropdownFade {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.condition-option {
+  padding: 12px 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: background 0.15s ease;
+}
+
+.condition-option:hover {
+  background: var(--bg-panel);
+}
+
+.condition-option.active {
+  background: var(--bg-panel);
+}
+
+.option-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.option-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* ============================================
+   Past Missions Section
+   ============================================ */
+.missions-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-height: 0;
+}
+
+.section-label {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 12px;
+  padding: 0 4px;
+}
+
+.missions-list {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-right: 4px;
+}
+
+/* Custom scrollbar */
+.missions-list::-webkit-scrollbar {
+  width: 4px;
+}
+
+.missions-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.missions-list::-webkit-scrollbar-thumb {
+  background: var(--border-subtle);
+  border-radius: 4px;
+}
+
+.missions-list::-webkit-scrollbar-thumb:hover {
+  background: var(--border-visible);
+}
+
+.mission-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  border: 1px solid transparent;
+}
+
+.mission-item:hover {
+  background: var(--bg-card);
+}
+
+.mission-item.active {
+  background: var(--bg-card);
+  border-color: var(--border-subtle);
+}
+
+.mission-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  transition: background 0.2s ease;
+}
+
+.mission-title {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mission-item.active .mission-title {
+  color: var(--text-primary);
+}
+
+/* ============================================
+   Footer Section
+   ============================================ */
+.sidebar-footer {
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-subtle);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Theme Toggle Button */
+.theme-btn {
+  width: 100%;
+  padding: 10px 14px;
+  background: transparent;
+  border: 1px solid var(--border-subtle);
+  border-radius: 10px;
+  color: var(--text-secondary);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.2s ease;
+}
+
+.theme-btn:hover {
+  border-color: var(--prism-yellow);
+  color: var(--text-primary);
+  background: var(--bg-card);
+}
+
+.theme-btn svg {
+  width: 18px;
+  height: 18px;
+  color: var(--prism-yellow);
+}
+
+/* User Card - Bento Box */
+.user-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  padding: 12px 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.user-avatar {
+  width: 36px;
+  height: 36px;
+  background: var(--prism-purple);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.user-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.user-name {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.user-level {
+  font-size: 11px;
+  color: var(--prism-green);
+  font-weight: 600;
+}
+
+/* ============================================
+   Collapsed State
+   ============================================ */
+.collapsed-actions {
+  padding: 16px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.collapsed-btn {
+  width: 40px;
+  height: 40px;
+  background: var(--prism-green);
+  border: none;
+  border-radius: 10px;
+  color: #000;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  box-shadow: var(--shadow-green);
+}
+
+.collapsed-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 24px rgba(29, 209, 161, 0.4);
+}
+
+.collapsed-btn svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* ============================================
+   Responsive
+   ============================================ */
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+  }
+  
+  .sidebar.open {
+    transform: translateX(0);
+  }
+}
+
+/* ============================================
+   LIGHT MODE OVERRIDES
+   ============================================ */
+[data-theme="light"] .sidebar {
+  background: #FFFFFF;
+  border-right-color: rgba(0, 0, 0, 0.08);
+  box-shadow: 2px 0 12px rgba(0, 0, 0, 0.04);
+}
+
+[data-theme="light"] .sidebar-header {
+  border-bottom-color: rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] .logo-text {
+  color: #1A1A2E;
+}
+
+[data-theme="light"] .collapse-btn {
+  border-color: rgba(0, 0, 0, 0.1);
+  color: #7A7A8A;
+}
+
+[data-theme="light"] .collapse-btn:hover {
+  background: #F5F5F7;
+  border-color: rgba(0, 0, 0, 0.15);
+  color: #1A1A2E;
+}
+
+[data-theme="light"] .new-mission-btn {
+  color: #FFFFFF;
+}
+
+[data-theme="light"] .condition-selector {
+  background: #F8F8FA;
+  border-color: rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] .condition-selector:hover {
+  background: #F0F0F4;
+  border-color: rgba(0, 0, 0, 0.12);
+}
+
+[data-theme="light"] .condition-name {
+  color: #1A1A2E;
+}
+
+[data-theme="light"] .condition-desc {
+  color: #7A7A8A;
+}
+
+[data-theme="light"] .dropdown-icon {
+  color: #7A7A8A;
+}
+
+[data-theme="light"] .condition-dropdown {
+  background: #FFFFFF;
+  border-color: rgba(0, 0, 0, 0.12);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .condition-option:hover {
+  background: #F5F5F7;
+}
+
+[data-theme="light"] .condition-option.active {
+  background: #F0F0F4;
+}
+
+[data-theme="light"] .option-name {
+  color: #1A1A2E;
+}
+
+[data-theme="light"] .section-label {
+  color: #7A7A8A;
+}
+
+[data-theme="light"] .mission-item:hover {
+  background: #F5F5F7;
+}
+
+[data-theme="light"] .mission-item.active {
+  background: #F0F0F4;
+  border-color: rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] .mission-title {
+  color: #4A4A5A;
+}
+
+[data-theme="light"] .mission-item.active .mission-title {
+  color: #1A1A2E;
+}
+
+[data-theme="light"] .sidebar-footer {
+  border-top-color: rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] .theme-btn {
+  border-color: rgba(0, 0, 0, 0.1);
+  color: #4A4A5A;
+}
+
+[data-theme="light"] .theme-btn:hover {
+  background: #F5F5F7;
+  border-color: var(--prism-purple);
+  color: #1A1A2E;
+}
+
+[data-theme="light"] .theme-btn svg {
+  color: var(--prism-purple);
+}
+
+[data-theme="light"] .user-card {
+  background: #F8F8FA;
+  border-color: rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] .user-name {
+  color: #1A1A2E;
+}
+
+[data-theme="light"] .missions-list::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .missions-list::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
