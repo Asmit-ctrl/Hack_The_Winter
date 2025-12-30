@@ -1,42 +1,82 @@
-# 🧠 NeuroNav - AI-Powered ADHD Screening Platform# 🧠 NeuroNav - AI-Powered ADHD Screening Platform# 🧠 NeuroNav - AI-Powered ADHD Screening Platform# 👥 NeuroNav User Guide
+# 🧠 NeuroNav - AI-Powered ADHD Screening Platform# 🧠 NeuroNav - AI-Powered ADHD Screening PlatformPlatform# 
 
 
 
 [![Version](https://img.shields.io/badge/version-2.0.0-blue.svg)](https://github.com/Asmit-ctrl/Hack_The_Winter)
 
-[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![Node](https://img.shields.io/badge/node-16+-green.svg)](https://nodejs.org)
 
-[![Node](https://img.shields.io/badge/node-16+-green.svg)](https://nodejs.org)[![Version](https://img.shields.io/badge/version-2.0.0-blue.svg)](https://github.com/Asmit-ctrl/Hack_The_Winter)
+[![React](https://img.shields.io/badge/react-18.2.0-blue.svg)](https://reactjs.org)[![Version](https://img.shields.io/badge/version-2.0.0-blue.svg)](https://github.com/Asmit-ctrl/Hack_The_Winter)
 
-[![React](https://img.shields.io/badge/react-18.2.0-blue.svg)](https://reactjs.org)
 
-[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
-**India's First AI-Powered ADHD Mission Control Platform**
+**India's First AI-Powered ADHD Screening Platform**
 
-[![Node](https://img.shields.io/badge/node-16+-green.svg)](https://nodejs.org)[![Version](https://img.shields.io/badge/version-2.0.0-blue.svg)](https://github.com/Asmit-ctrl/Hack_The_Winter)Quick guide to using NeuroNav for ADHD screening.
 
-> Transforming ADHD screening from clinical questionnaires to gamified therapeutic journeys for K-12 students
 
-[![React](https://img.shields.io/badge/react-18.2.0-blue.svg)](https://reactjs.org)
+> A clinical-grade ADHD screening tool using conversational AI and DSM-5 criteria for K-12 students (ages 6-17)[![Node](https://img.shields.io/badge/node-16+-green.svg)](https://nodejs.org)[![Version](https://img.shields.io/badge/version-2.0.0-blue.svg)](https://github.com/Asmit-ctrl/Hack_The_Winter)
 
----
 
-[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+
+---[![React](https://img.shields.io/badge/react-18.2.0-blue.svg)](https://reactjs.org)
+
+
 
 ## 🌟 What is NeuroNav?
 
-**India's First AI-Powered ADHD Mission Control Platform**
 
-NeuroNav is an intelligent ADHD screening platform for children aged 6-17 that uses:
 
-- **Conversational AI** (Fine-tuned GPT-3.5-turbo) for natural, adaptive assessments[![Node](https://img.shields.io/badge/node-16+-green.svg)](https://nodejs.org)---
+NeuroNav is an intelligent ADHD screening platform that provides:**India's First AI-Powered ADHD Mission Control Platform**
 
-- **Gamified "Mission Control" Interface** with 6 space-themed sectors
 
-- **DSM-5 Clinical Scoring** for medical-grade accuracy> Transforming ADHD screening from clinical questionnaires to gamified therapeutic journeys for K-12 students
 
-- **Professional PDF Reports** to share with healthcare providers
+- **Conversational AI Assessment** using fine-tuned GPT-3.5-turbo for natural, adaptive conversations[![Node](https://img.shields.io/badge/node-16+-green.svg)](https://nodejs.org)[![Version](https://img.shields.io/badge/version-2.0.0-blue.svg)](https://github.com/Asmit-ctrl/Hack_The_Winter)Quick guide to using NeuroNav for ADHD screening.
+
+- **DSM-5 Clinical Scoring** with 60+ behavioral patterns across 5 ADHD domains
+
+- **Age-Adaptive Thresholds** (6+ symptoms for ages 6-16, 5+ for ages 17+)> Transforming ADHD screening from clinical questionnaires to gamified therapeutic journeys for K-12 students
+
+- **Professional PDF Reports** shareable with healthcare providers
+
+- **Multi-Respondent Support** for parents, teachers, and teens (13+)[![React](https://img.shields.io/badge/react-18.2.0-blue.svg)](https://reactjs.org)
+
+
+
+### Who Can Use It---
+
+
+
+| User Type | Description |[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+
+|-----------|-------------|
+
+| 👨‍👩‍👧 **Parents** | Answer questions about your child's behavior at home |## 🌟 What is NeuroNav?
+
+| 👨‍🏫 **Teachers** | Share classroom observations and academic patterns |
+
+| 🧑 **Teens (13-17)** | Complete self-assessment with guidance |**India's First AI-Powered ADHD Mission Control Platform**
+
+
+
+---NeuroNav is an intelligent ADHD screening platform for children aged 6-17 that uses:
+
+
+
+## 📚 Documentation- **Conversational AI** (Fine-tuned GPT-3.5-turbo) for natural, adaptive assessments[![Node](https://img.shields.io/badge/node-16+-green.svg)](https://nodejs.org)---
+
+
+
+| Document | Description |- **Gamified "Mission Control" Interface** with 6 space-themed sectors
+
+|----------|-------------|
+
+| 📖 [**USER_GUIDE.md**](./USER_GUIDE.md) | Complete usage guide for parents, teachers, teens |- **DSM-5 Clinical Scoring** for medical-grade accuracy> Transforming ADHD screening from clinical questionnaires to gamified therapeutic journeys for K-12 students
+
+| 👨‍💻 [**DEVELOPER_GUIDE.md**](./DEVELOPER_GUIDE.md) | Technical setup, architecture, API documentation |
+
+| 🚀 [**INNOVATION_USP_IMPACT.md**](./INNOVATION_USP_IMPACT.md) | Innovation features, USP, and societal impact |- **Professional PDF Reports** to share with healthcare providers
+
+| 🔬 [**RESEARCH_WORK.md**](./RESEARCH_WORK.md) | Research foundation, clinical validation, citations |
 
 [![React](https://img.shields.io/badge/react-18.2.0-blue.svg)](https://reactjs.org)
 
@@ -44,318 +84,637 @@ NeuroNav is an intelligent ADHD screening platform for children aged 6-17 that u
 
 ---
 
-## 📚 Documentation
+## ✨ Key Features
 
-## What is NeuroNav?
+---
+
+### 🧠 AI-Powered Assessment
+
+- Fine-tuned GPT-3.5-turbo for natural conversations## 📚 Documentation
+
+- Real-time pattern detection (60+ behavioral indicators)
+
+- Context-aware follow-up questions## What is NeuroNav?
+
+- Negation detection to avoid false positives
 
 | Document | Description |
 
-|----------|-------------|## 🌟 What is NeuroNav?
+### 📊 Clinical Accuracy
 
-| 📖 [**USER_GUIDE.md**](./USER_GUIDE.md) | How to use the app (parents, teachers, teens) |
-
-| 👨‍💻 [**DEVELOPER_GUIDE.md**](./DEVELOPER_GUIDE.md) | Technical setup, architecture, API docs |**India's First AI-Powered ADHD Mission Control Platform**
-
-| 🚀 [**INNOVATION_USP_IMPACT.md**](./INNOVATION_USP_IMPACT.md) | Innovation, USP, and societal impact |
-
-NeuroNav is an intelligent ADHD screening platform for children aged 6-17 that uses:
-
----
-
-- **Conversational AI** (Fine-tuned GPT-3.5-turbo) for natural, adaptive assessmentsNeuroNav is an **AI-powered ADHD screening tool** for children aged 6-17. It uses natural conversation to assess attention, hyperactivity, and impulsivity patterns.
-
-## ✨ Key Features
-
-- **Gamified "Mission Control" Interface** with 6 space-themed sectors
-
-### 🎮 Gamified Experience
-
-- 6-phase "Mission Sectors" (Introduction → Focus → Energy → Impulse → Emotions → Strengths)- **DSM-5 Clinical Scoring** for medical-grade accuracy> Transforming ADHD screening from clinical questionnaires to gamified therapeutic journeys for K-12 students
-
-- Prism color-coding (Orange → Blue → Yellow → Red → Purple → Green)
-
-- Animated star field, mission maps, progress indicators- **Professional PDF Reports** to share with healthcare providers
-
-
-
-### 🧠 AI-Powered Assessment**Who Can Use It:**
-
-- Fine-tuned GPT-3.5-turbo natural language conversations
-
-- Real-time pattern detection (60+ behavioral patterns)---
+- DSM-5 compliant scoring algorithm|----------|-------------|## 🌟 What is NeuroNav?
 
 - 5 ADHD domains: Inattention, Hyperactivity, Impulsivity, Emotional, Executive Function
 
----- 👨‍👩‍👧 **Parents** - Answer about your child
+- Age-adaptive symptom thresholds| 📖 [**USER_GUIDE.md**](./USER_GUIDE.md) | How to use the app (parents, teachers, teens) |
 
-### 📊 Clinical Accuracy
+- Weighted indicator scoring (1-2 per pattern)
 
-- DSM-5 compliant scoring algorithm## 📚 Documentation
+| 👨‍💻 [**DEVELOPER_GUIDE.md**](./DEVELOPER_GUIDE.md) | Technical setup, architecture, API docs |**India's First AI-Powered ADHD Mission Control Platform**
 
-- Age-adaptive thresholds (6+ symptoms <17yo, 5+ symptoms ≥17yo)
+### 📄 Professional Reports
 
-- Severity levels: Minimal, Mild, Moderate, Severe- 👨‍🏫 **Teachers** - Share classroom observations  
+- Downloadable PDF with domain scores| 🚀 [**INNOVATION_USP_IMPACT.md**](./INNOVATION_USP_IMPACT.md) | Innovation, USP, and societal impact |
 
+- Complete conversation transcript
 
+- Clinical recommendationsNeuroNav is an intelligent ADHD screening platform for children aged 6-17 that uses:
 
-### 📄 Professional Reports| Document | Description |
-
-- Downloadable PDF with domain scores and transcript
-
-- Shareable with healthcare providers|----------|-------------|## 🌟 What is NeuroNav?- 🧑 **Teens (13-17)** - Self-assessment
-
-- Clinical recommendations included
-
-| 📖 [**USER_GUIDE.md**](./USER_GUIDE.md) | How to use the app (parents, teachers, teens) |
+- Shareable with healthcare providers
 
 ---
 
-| 👨‍💻 [**DEVELOPER_GUIDE.md**](./DEVELOPER_GUIDE.md) | Technical setup, architecture, API docs |
+### ♿ Cognitive-Friendly Design
 
-## 🚀 Quick Start
+- **Zen Mode** - Reduce visual distractions- **Conversational AI** (Fine-tuned GPT-3.5-turbo) for natural, adaptive assessmentsNeuroNav is an **AI-powered ADHD screening tool** for children aged 6-17. It uses natural conversation to assess attention, hyperactivity, and impulsivity patterns.
 
-| 🚀 [**INNOVATION_USP_IMPACT.md**](./INNOVATION_USP_IMPACT.md) | Innovation, USP, and societal impact |
+- **Cool-Down Timer** - Prevent rushing through questions
 
-### Prerequisites
+- **Focus Meter** - Real-time engagement feedback## ✨ Key Features
 
-- Node.js 16+NeuroNav is an intelligent ADHD screening platform for children aged 6-17 that uses:---
+- **Pattern Toasts** - Non-intrusive indicator notifications
 
-- MongoDB 5+
+- **Gamified "Mission Control" Interface** with 6 space-themed sectors
 
-- OpenAI API Key---
-
-
-
-### Installation- **Conversational AI** (GPT-4) for natural, adaptive assessments
-
-
-
-```bash## ✨ Key Features
-
-# Clone repository
-
-git clone https://github.com/Asmit-ctrl/Hack_The_Winter.git- **Gamified "Mission Control" Interface** with 6 space-themed sectors## Features
-
-cd Hack_The_Winter
+---
 
 ### 🎮 Gamified Experience
 
+## 🎯 The 6 Assessment Phases
+
+- 6-phase "Mission Sectors" (Introduction → Focus → Energy → Impulse → Emotions → Strengths)- **DSM-5 Clinical Scoring** for medical-grade accuracy> Transforming ADHD screening from clinical questionnaires to gamified therapeutic journeys for K-12 students
+
+| Phase | Name | Focus Area | Icon |
+
+|-------|------|------------|------|- Prism color-coding (Orange → Blue → Yellow → Red → Purple → Green)
+
+| 0 | **Alpha** | Introduction & Context | 👋 |
+
+| 1 | **Beta** | Focus & Attention | 🎯 |- Animated star field, mission maps, progress indicators- **Professional PDF Reports** to share with healthcare providers
+
+| 2 | **Gamma** | Energy & Movement | ⚡ |
+
+| 3 | **Delta** | Impulse Control | ⏱️ |
+
+| 4 | **Epsilon** | Emotional Regulation | 💭 |
+
+| 5 | **Omega** | Strengths & Wrap-up | ⭐ |### 🧠 AI-Powered Assessment**Who Can Use It:**
+
+
+
+Each phase contains 2-5 conversational exchanges designed to assess specific DSM-5 criteria naturally.- Fine-tuned GPT-3.5-turbo natural language conversations
+
+
+
+---- Real-time pattern detection (60+ behavioral patterns)---
+
+
+
+## 📊 Understanding Results- 5 ADHD domains: Inattention, Hyperactivity, Impulsivity, Emotional, Executive Function
+
+
+
+### Severity Levels---- 👨‍👩‍👧 **Parents** - Answer about your child
+
+
+
+| Level | Total Score | Interpretation |### 📊 Clinical Accuracy
+
+|-------|-------------|----------------|
+
+| 🟢 **Minimal** | < 15 | Few or no significant indicators detected |- DSM-5 compliant scoring algorithm## 📚 Documentation
+
+| 🟡 **Mild** | ≥ 15 | Notable patterns present; monitoring recommended |
+
+| 🟠 **Moderate** | ≥ 28 | Significant patterns; professional evaluation advised |- Age-adaptive thresholds (6+ symptoms <17yo, 5+ symptoms ≥17yo)
+
+| 🔴 **Severe** | ≥ 42 | Multiple strong indicators; comprehensive evaluation recommended |
+
+- Severity levels: Minimal, Mild, Moderate, Severe- 👨‍🏫 **Teachers** - Share classroom observations  
+
+### The 5 ADHD Domains
+
+
+
+| Domain | What It Measures |
+
+|--------|------------------|### 📄 Professional Reports| Document | Description |
+
+| 🎯 **Inattention** | Focus problems, task completion, organization, forgetfulness |
+
+| ⚡ **Hyperactivity** | Excessive movement, fidgeting, restlessness, can't stay seated |- Downloadable PDF with domain scores and transcript
+
+| ⏱️ **Impulsivity** | Acting without thinking, interrupting, difficulty waiting |
+
+| 💭 **Emotional** | Frustration tolerance, mood swings, emotional reactions |- Shareable with healthcare providers|----------|-------------|## 🌟 What is NeuroNav?- 🧑 **Teens (13-17)** - Self-assessment
+
+| 🧠 **Executive Function** | Planning, time management, task initiation, working memory |
+
+- Clinical recommendations included
+
+### Age-Based Thresholds
+
+| 📖 [**USER_GUIDE.md**](./USER_GUIDE.md) | How to use the app (parents, teachers, teens) |
+
+| Age Group | Symptom Threshold |
+
+|-----------|-------------------|---
+
+| Ages 6-16 | 6+ symptoms for clinical significance |
+
+| Ages 17+ | 5+ symptoms for clinical significance || 👨‍💻 [**DEVELOPER_GUIDE.md**](./DEVELOPER_GUIDE.md) | Technical setup, architecture, API docs |
+
+
+
+---## 🚀 Quick Start
+
+
+
+## 🚀 Quick Start| 🚀 [**INNOVATION_USP_IMPACT.md**](./INNOVATION_USP_IMPACT.md) | Innovation, USP, and societal impact |
+
+
+
+### Prerequisites### Prerequisites
+
+- Node.js 16+
+
+- MongoDB 5+- Node.js 16+NeuroNav is an intelligent ADHD screening platform for children aged 6-17 that uses:---
+
+- OpenAI API Key
+
+- MongoDB 5+
+
+### Installation
+
+- OpenAI API Key---
+
+```bash
+
+# Clone repository
+
+git clone https://github.com/Asmit-ctrl/Hack_The_Winter.git
+
+cd Hack_The_Winter### Installation- **Conversational AI** (GPT-4) for natural, adaptive assessments
+
+
+
 # Backend setup
 
-cd backend- 6-phase "Mission Sectors" (Introduction → Focus → Energy → Impulse → Emotions → Strengths)- **DSM-5 Clinical Scoring** for medical-grade accuracy
+cd backend
 
-npm install
-
-# Create .env file (see DEVELOPER_GUIDE.md)- Prism color-coding (Orange → Blue → Yellow → Red → Purple → Green)
+npm install```bash## ✨ Key Features
 
 
 
-# Frontend setup- Animated star field, mission maps, progress indicators- **Professional PDF Reports** to share with healthcare providers### 🎮 Interactive Experience
+# Frontend setup# Clone repository
 
 cd ../frontend
 
-npm install
+npm installgit clone https://github.com/Asmit-ctrl/Hack_The_Winter.git- **Gamified "Mission Control" Interface** with 6 space-themed sectors## Features
 
+```
 
+cd Hack_The_Winter
 
-# Start services### 🧠 AI-Powered Assessment- **Mission-Based Journey** - 6 sectors (phases) as space exploration
+### Environment Configuration
 
-# Terminal 1: Start MongoDB
+### 🎮 Gamified Experience
 
-# Terminal 2: cd backend && npm run dev- Fine-tuned GPT-3.5-turbo natural language conversations
+Create `backend/.env`:
 
-# Terminal 3: cd frontend && npm start
-
-```- Real-time pattern detection (60+ behavioral patterns)---- **Color-Coded** - Each phase has unique colors (Orange → Blue → Yellow → Red → Purple → Green)
-
-
-
-### Environment Variables (backend/.env)- 5 ADHD domains: Inattention, Hyperactivity, Impulsivity, Emotional, Executive Function
+# Backend setup
 
 ```env
 
-OPENAI_API_KEY=your_openai_key_here- **Beautiful Visuals** - Animated stars, progress map, real-time feedback
+OPENAI_API_KEY=your_openai_api_keycd backend- 6-phase "Mission Sectors" (Introduction → Focus → Energy → Impulse → Emotions → Strengths)- **DSM-5 Clinical Scoring** for medical-grade accuracy
 
 MONGODB_URI=mongodb://localhost:27017/neuronav
 
-PORT=5000### 📊 Clinical Accuracy
+PORT=5000npm install
 
 NODE_ENV=development
 
-SESSION_SECRET=your_random_secret_key- DSM-5 compliant scoring algorithm## 📚 Documentation- **Smart Pacing** - Cool-down timers, engagement monitoring, Zen mode
+SESSION_SECRET=your_random_32_char_secret# Create .env file (see DEVELOPER_GUIDE.md)- Prism color-coding (Orange → Blue → Yellow → Red → Purple → Green)
 
 CORS_ORIGIN=http://localhost:3000
 
-FINE_TUNED_MODEL=your_fine_tuned_model_id- Age-adaptive thresholds (6+ symptoms <17yo, 5+ symptoms ≥17yo)
+FINE_TUNED_MODEL=your_fine_tuned_model_id
 
 ```
 
-- Severity levels: Minimal, Mild, Moderate, Severe
+# Frontend setup- Animated star field, mission maps, progress indicators- **Professional PDF Reports** to share with healthcare providers### 🎮 Interactive Experience
+
+### Running the Application
+
+cd ../frontend
+
+```bash
+
+# Terminal 1: Start MongoDBnpm install
+
+mongod
+
+
+
+# Terminal 2: Start Backend
+
+cd backend# Start services### 🧠 AI-Powered Assessment- **Mission-Based Journey** - 6 sectors (phases) as space exploration
+
+npm run dev
+
+# Terminal 1: Start MongoDB
+
+# Terminal 3: Start Frontend
+
+cd frontend# Terminal 2: cd backend && npm run dev- Fine-tuned GPT-3.5-turbo natural language conversations
+
+npm start
+
+```# Terminal 3: cd frontend && npm start
+
+
+
+Access the application at `http://localhost:3000````- Real-time pattern detection (60+ behavioral patterns)---- **Color-Coded** - Each phase has unique colors (Orange → Blue → Yellow → Red → Purple → Green)
+
+
 
 ---
 
 
 
-## 🏗️ Tech Stack
+## 🏗️ Tech Stack### Environment Variables (backend/.env)- 5 ADHD domains: Inattention, Hyperactivity, Impulsivity, Emotional, Executive Function
 
-### 📄 Professional Reports| Document | Description |### 📊 Results & Reports
 
-| Layer | Technology |
 
-|-------|------------|- Downloadable PDF with domain scores and transcript
+| Layer | Technology | Version |```env
 
-| **Frontend** | React 18.2.0, CSS3, Lucide React |
+|-------|------------|---------|
 
-| **Backend** | Node.js, Express 4.18.2 |- Shareable with healthcare providers|----------|-------------|- **Visual Results** - Color-coded severity levels and domain scores
+| **Frontend** | React, CSS3, Lucide React | 18.2.0 |OPENAI_API_KEY=your_openai_key_here- **Beautiful Visuals** - Animated stars, progress map, real-time feedback
 
-| **Database** | MongoDB, Mongoose 8.0.3 |
+| **Backend** | Node.js, Express | 4.18.2 |
 
-| **AI** | Fine-tuned GPT-3.5-turbo (OpenAI API v4.24.1) |- Clinical recommendations included
+| **Database** | MongoDB, Mongoose | 8.0.3 |MONGODB_URI=mongodb://localhost:27017/neuronav
 
-| **Reports** | PDFKit 0.14.0 |
+| **AI** | Fine-tuned GPT-3.5-turbo (OpenAI) | 4.24.1 |
 
-| 📖 [**USER_GUIDE.md**](./USER_GUIDE.md) | How to use the app (parents, teachers, teens) |- **PDF Report** - Professional report with transcript, scores, recommendations
+| **Reports** | PDFKit | 0.14.0 |PORT=5000### 📊 Clinical Accuracy
 
----
 
----
 
-## 📁 Project Structure
+---NODE_ENV=development
 
-| 👨‍💻 [**DEVELOPER_GUIDE.md**](./DEVELOPER_GUIDE.md) | Technical setup, architecture, API docs |- **5 ADHD Domains** - Inattention, Hyperactivity, Impulsivity, Emotional, Executive Function
 
-```
 
-Hack_The_Winter/## 🚀 Quick Start
+## 📁 Project StructureSESSION_SECRET=your_random_secret_key- DSM-5 compliant scoring algorithm## 📚 Documentation- **Smart Pacing** - Cool-down timers, engagement monitoring, Zen mode
 
-├── backend/
 
-│   └── src/| 🚀 [**INNOVATION_USP_IMPACT.md**](./INNOVATION_USP_IMPACT.md) | Innovation, USP, and societal impact |
 
-│       ├── config/          # Phases, DSM-5 patterns
+```CORS_ORIGIN=http://localhost:3000
 
-│       ├── controllers/     # Session, chat, report### Prerequisites
+Hack_The_Winter/
 
-│       ├── services/        # AI, scoring, PDF generation
-
-│       ├── models/          # MongoDB schemas- Node.js 16+---
-
-│       └── routes/          # API endpoints
-
-├── frontend/- MongoDB 5+
+├── backend/FINE_TUNED_MODEL=your_fine_tuned_model_id- Age-adaptive thresholds (6+ symptoms <17yo, 5+ symptoms ≥17yo)
 
 │   └── src/
 
-│       ├── components/      # UI components (20+)- OpenAI API Key---
+│       ├── config/          # Phases, DSM-5 patterns, database```
+
+│       ├── controllers/     # Session, chat, report handlers
+
+│       ├── services/        # AI, scoring engine, PDF generator- Severity levels: Minimal, Mild, Moderate, Severe
+
+│       ├── models/          # MongoDB schemas
+
+│       ├── routes/          # API endpoints---
+
+│       └── middleware/      # Error handling, validation
+
+├── frontend/
+
+│   └── src/
+
+│       ├── components/      # 20+ React components## 🏗️ Tech Stack
 
 │       ├── context/         # App state management
 
-│       └── config/          # Frontend config
+│       ├── hooks/           # Custom React hooks### 📄 Professional Reports| Document | Description |### 📊 Results & Reports
 
-└── docs/
+│       └── config/          # Frontend configuration
 
-    ├── USER_GUIDE.md### Installation## How to Use the App
+└── docs/| Layer | Technology |
+
+    ├── README.md
+
+    ├── USER_GUIDE.md|-------|------------|- Downloadable PDF with domain scores and transcript
 
     ├── DEVELOPER_GUIDE.md
 
-    └── INNOVATION_USP_IMPACT.md
+    ├── INNOVATION_USP_IMPACT.md| **Frontend** | React 18.2.0, CSS3, Lucide React |
 
-```
+    └── RESEARCH_WORK.md
 
-```bash## ✨ Key Features
+```| **Backend** | Node.js, Express 4.18.2 |- Shareable with healthcare providers|----------|-------------|- **Visual Results** - Color-coded severity levels and domain scores
+
+
+
+---| **Database** | MongoDB, Mongoose 8.0.3 |
+
+
+
+## 📊 API Endpoints| **AI** | Fine-tuned GPT-3.5-turbo (OpenAI API v4.24.1) |- Clinical recommendations included
+
+
+
+| Method | Endpoint | Description || **Reports** | PDFKit 0.14.0 |
+
+|--------|----------|-------------|
+
+| `POST` | `/api/sessions/create` | Create new screening session || 📖 [**USER_GUIDE.md**](./USER_GUIDE.md) | How to use the app (parents, teachers, teens) |- **PDF Report** - Professional report with transcript, scores, recommendations
+
+| `POST` | `/api/chat/message` | Send message, receive AI response |
+
+| `POST` | `/api/chat/advance` | Advance to next phase |---
+
+| `GET` | `/api/sessions/:id` | Retrieve session data |
+
+| `POST` | `/api/report/generate` | Generate PDF report |---
+
+
+
+---## 📁 Project Structure
+
+
+
+## 💡 Answer Quality Tips| 👨‍💻 [**DEVELOPER_GUIDE.md**](./DEVELOPER_GUIDE.md) | Technical setup, architecture, API docs |- **5 ADHD Domains** - Inattention, Hyperactivity, Impulsivity, Emotional, Executive Function
+
+
+
+### Good vs. Poor Responses```
+
+
+
+| Topic | ❌ Vague | ✅ Specific |Hack_The_Winter/## 🚀 Quick Start
+
+|-------|---------|-------------|
+
+| **Focus** | "Struggles with homework" | "Takes 3 hours for 30-min homework, gets up every 5 minutes" |├── backend/
+
+| **Energy** | "Can't sit still" | "Up 5+ times per meal, fidgets constantly even while chewing" |
+
+| **Impulse** | "Sometimes interrupts" | "Interrupts every conversation, can't wait 10 seconds before blurting" |│   └── src/| 🚀 [**INNOVATION_USP_IMPACT.md**](./INNOVATION_USP_IMPACT.md) | Innovation, USP, and societal impact |
+
+| **Emotions** | "Gets upset" | "Cries for 20+ minutes over small things, throws items when frustrated" |
+
+│       ├── config/          # Phases, DSM-5 patterns
+
+### Best Practices
+
+- ✓ Observe patterns over 6+ months│       ├── controllers/     # Session, chat, report### Prerequisites
+
+- ✓ Compare to same-age children
+
+- ✓ Consider multiple settings (home, school, social)│       ├── services/        # AI, scoring, PDF generation
+
+- ✓ Be specific with examples and frequency
+
+- ✓ Take your time (quality over speed)│       ├── models/          # MongoDB schemas- Node.js 16+---
+
+
+
+---│       └── routes/          # API endpoints
+
+
+
+## 🔬 Research Foundation├── frontend/- MongoDB 5+
+
+
+
+NeuroNav is built on validated clinical research:│   └── src/
+
+
+
+- **Prevalence:** 12M+ Indian children affected (6-17% prevalence studies)│       ├── components/      # UI components (20+)- OpenAI API Key---
+
+- **Diagnostic Gap:** 80% of cases undiagnosed, 6+ month waitlists at NIMHANS
+
+- **Clinical Basis:** DSM-5 criteria, Vanderbilt ADHD Scale (91.8% sensitivity)│       ├── context/         # App state management
+
+- **AI Validation:** Conversational AI screening shows 82% agreement with clinicians
+
+│       └── config/          # Frontend config
+
+📖 **See [RESEARCH_WORK.md](./RESEARCH_WORK.md) for complete citations and methodology**
+
+└── docs/
+
+---
+
+    ├── USER_GUIDE.md### Installation## How to Use the App
+
+## 🌍 Impact
+
+    ├── DEVELOPER_GUIDE.md
+
+| Metric | Current State | NeuroNav Solution |
+
+|--------|---------------|-------------------|    └── INNOVATION_USP_IMPACT.md
+
+| **Affected** | 12M+ Indian K-12 students | Accessible screening for all |
+
+| **Diagnosed** | <20% (80% missed) | Early identification tool |```
+
+| **Waitlists** | 6+ months at centers | Instant preliminary screening |
+
+| **Cost** | ₹5,000-15,000 per evaluation | Free screening access |```bash## ✨ Key Features
+
+| **Coverage** | Urban centers only | Works anywhere with internet |
+
+---
 
 ---
 
 # Clone repository
 
+## ⚠️ Important Disclaimer
+
 ## 🎯 The 6 Mission Sectors
 
-git clone https://github.com/Asmit-ctrl/Hack_The_Winter.git### Step 1: Setup (2 min)
+### What NeuroNav IS:
 
-| Phase | Sector | Focus | Color |
+- ✅ A structured screening questionnairegit clone https://github.com/Asmit-ctrl/Hack_The_Winter.git### Step 1: Setup (2 min)
+
+- ✅ A pattern identification tool
+
+- ✅ A report to share with healthcare providers| Phase | Sector | Focus | Color |
+
+- ✅ A conversation starter for professional evaluation
 
 |-------|--------|-------|-------|cd Hack_The_Winter
 
-| 0 | 👋 Alpha | Introduction | 🟠 Orange |
+### What NeuroNav is NOT:
 
-| 1 | 🎯 Beta | Focus & Attention | 🔵 Blue |### 🎮 Gamified Experience1. Open NeuroNav in browser
+- ❌ A medical diagnosis| 0 | 👋 Alpha | Introduction | 🟠 Orange |
 
-| 2 | ⚡ Gamma | Energy & Movement | 🟡 Yellow |
+- ❌ A replacement for professional evaluation
 
-| 3 | ⏱️ Delta | Impulse Control | 🔴 Red |# Backend setup
-
-| 4 | 💭 Epsilon | Emotions | 🟣 Purple |
-
-| 5 | ⭐ Omega | Strengths & Wrap-up | 🟢 Green |cd backend- 6-phase "Mission Sectors" (Introduction → Focus → Energy → Impulse → Emotions → Strengths)2. Enter: Child's name, age (6-17), your role (Parent/Teacher/Self)
+- ❌ Sufficient for treatment decisions| 1 | 🎯 Beta | Focus & Attention | 🔵 Blue |### 🎮 Gamified Experience1. Open NeuroNav in browser
 
 
 
----npm install
+**Only licensed mental health professionals can diagnose ADHD.** Always consult a qualified healthcare provider for comprehensive evaluation.| 2 | ⚡ Gamma | Energy & Movement | 🟡 Yellow |
 
 
 
-## 📊 API Endpoints# Create .env file (see DEVELOPER_GUIDE.md)- Prism color-coding (Orange → Blue → Yellow → Red → Purple → Green)3. Click "Launch Mission"
+---| 3 | ⏱️ Delta | Impulse Control | 🔴 Red |# Backend setup
 
 
 
-| Method | Endpoint | Description |
+## 📱 During the Assessment| 4 | 💭 Epsilon | Emotions | 🟣 Purple |
 
-|--------|----------|-------------|
 
-| POST | `/api/sessions/create` | Create screening session |# Frontend setup- Animated star field, mission maps, progress indicators
 
-| POST | `/api/chat/message` | Send message, get AI response |
+### Available Features| 5 | ⭐ Omega | Strengths & Wrap-up | 🟢 Green |cd backend- 6-phase "Mission Sectors" (Introduction → Focus → Energy → Impulse → Emotions → Strengths)2. Enter: Child's name, age (6-17), your role (Parent/Teacher/Self)
 
-| POST | `/api/chat/advance` | Advance to next phase |cd ../frontend
+
+
+| Feature | Purpose |
+
+|---------|---------|
+
+| 🧘 **Zen Mode** | Reduce visual distractions for better focus |---npm install
+
+| ⏰ **Cool-Down Timer** | Prevents rushing, encourages thoughtful responses |
+
+| 📊 **Pattern Toasts** | Real-time feedback on detected patterns |
+
+| 📈 **Focus Meter** | Engagement quality indicator |
+
+| 💡 **Hints** | Example answers for guidance |## 📊 API Endpoints# Create .env file (see DEVELOPER_GUIDE.md)- Prism color-coding (Orange → Blue → Yellow → Red → Purple → Green)3. Click "Launch Mission"
+
+
+
+---
+
+
+
+## ❓ FAQ| Method | Endpoint | Description |
+
+
+
+| Question | Answer ||--------|----------|-------------|
+
+|----------|--------|
+
+| **How long does it take?** | 15-25 minutes. Take your time for accuracy. || POST | `/api/sessions/create` | Create screening session |# Frontend setup- Animated star field, mission maps, progress indicators
+
+| **Can I save and return?** | Currently, complete in one session. |
+
+| **Should my child be present?** | For parent/teacher - no. For teen self-assessment - yes. || POST | `/api/chat/message` | Send message, get AI response |
+
+| **High scores - what now?** | Download PDF and schedule healthcare appointment. |
+
+| **Are results accurate?** | Uses DSM-5 criteria, but only professionals can diagnose. || POST | `/api/chat/advance` | Advance to next phase |cd ../frontend
+
+| **Can I reassess later?** | Yes! Reassess after several months to track changes. |
 
 | GET | `/api/sessions/:id` | Get session data |
 
+---
+
 | POST | `/api/report/generate` | Generate PDF report |npm install### Step 2: Complete 6 Sectors (15-25 min)
 
-
-
----
-
-
-
-## 🧪 Testing# Start services### 🧠 AI-Powered Assessment
+## 🔒 Privacy & Security
 
 
 
-```bash# Terminal 1: Start MongoDB
+- 🔒 Secure session-based storage
 
-cd backend
+- 🔒 Data stored locally in your MongoDB instance---
 
-node tests/runner.js# Terminal 2: cd backend && npm run dev- GPT-4 natural language conversations| Sector | Focus | Duration |
+- 🔒 Reports accessible only to you
 
-```
-
-# Terminal 3: cd frontend && npm start
-
-Results saved in `tests/results/`
-
-```- Real-time pattern detection (60+ behavioral patterns)|--------|-------|----------|
-
----
+- 🔒 No third-party data sharing
 
 
 
-## 🌍 Impact
+---## 🧪 Testing# Start services### 🧠 AI-Powered Assessment
+
+
+
+## 👨‍💻 Developer
+
+
+
+**Asmit** - [@Asmit-ctrl](https://github.com/Asmit-ctrl)```bash# Terminal 1: Start MongoDB
+
+
+
+**Project:** Hack The Winter 2025cd backend
+
+
+
+---node tests/runner.js# Terminal 2: cd backend && npm run dev- GPT-4 natural language conversations| Sector | Focus | Duration |
+
+
+
+## 🙏 Acknowledgments```
+
+
+
+- **American Psychiatric Association** - DSM-5 criteria# Terminal 3: cd frontend && npm start
+
+- **OpenAI** - Fine-tuned GPT-3.5-turbo API
+
+- **NIMHANS** - Indian ADHD research foundationResults saved in `tests/results/`
+
+- **React Community** - Frontend framework
+
+- **Indian ADHD Advocacy Organizations** - Awareness efforts```- Real-time pattern detection (60+ behavioral patterns)|--------|-------|----------|
+
+
+
+------
+
+
+
+## 📞 Support
+
+
+
+- **Technical Issues:** [Open GitHub Issue](https://github.com/Asmit-ctrl/Hack_The_Winter/issues)## 🌍 Impact
+
+- **Developer:** [@Asmit-ctrl](https://github.com/Asmit-ctrl)
 
 ### Environment Variables (backend/.env)- 5 ADHD domains: Inattention, Hyperactivity, Impulsivity, Emotional, Executive Function| 👋 **Alpha** (Orange) | Introduction, initial concerns | 2-3 questions |
 
+**For clinical concerns, always consult a qualified healthcare provider.**
+
 - **Target:** 12M+ Indian K-12 students with ADHD patterns
+
+---
 
 - **Problem:** 6+ month waitlists at centers like NIMHANS```env
 
+**Made with ❤️ for India's neurodivergent students**
+
 - **Solution:** Instant, accessible, clinical-grade screening
+
+---
 
 - **Goal:** Bridge gap from screening to professional evaluationOPENAI_API_KEY=your_key_here| 🎯 **Beta** (Blue) | Focus & attention patterns | 3-5 questions |
 
+## 📖 Related Documentation
 
 
----MONGODB_URI=mongodb://localhost:27017/neuronav
 
+- [USER_GUIDE.md](./USER_GUIDE.md) - Detailed usage instructions
+
+- [DEVELOPER_GUIDE.md](./DEVELOPER_GUIDE.md) - Technical setup guide---MONGODB_URI=mongodb://localhost:27017/neuronav
+
+- [INNOVATION_USP_IMPACT.md](./INNOVATION_USP_IMPACT.md) - Innovation & roadmap
+
+- [RESEARCH_WORK.md](./RESEARCH_WORK.md) - Research foundation & citations
 
 
 ## ⚠️ DisclaimerPORT=5000### 📊 Clinical Accuracy| ⚡ **Gamma** (Yellow) | Energy & hyperactivity | 3-5 questions |
