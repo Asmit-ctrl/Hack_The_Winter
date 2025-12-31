@@ -361,9 +361,6 @@ Results saved in `tests/results/`
 
 ---
 
-## 📄 License
-
-MIT License - See [LICENSE](LICENSE) for details
 
 ---
 
