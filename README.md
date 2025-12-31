@@ -1,4 +1,4 @@
-# 🧠 NeuroNav - AI-Powered ADHD Screening Platform
+# 🧠 NeuroFocus - AI-Powered ADHD Screening Platform
 
 [![Version](https://img.shields.io/badge/version-2.0.0-blue.svg)](https://github.com/Asmit-ctrl/Hack_The_Winter)
 [![Node](https://img.shields.io/badge/node-16+-green.svg)](https://nodejs.org)
