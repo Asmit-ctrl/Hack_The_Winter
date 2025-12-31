@@ -18,9 +18,12 @@ Complete technical documentation for developers.
 10. [Testing](#testing)
 11. [Deployment](#deployment)
 
----
+
+
 
 ## Architecture Overview
+
+---<img width="1440" height="780" alt="Blank diagram (6)" src="https://github.com/user-attachments/assets/e8669560-6529-4aa3-bf5a-eef4f0bdf930" />
 
 ```
 ┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐
