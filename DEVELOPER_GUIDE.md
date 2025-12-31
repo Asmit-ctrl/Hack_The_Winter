@@ -1,4 +1,4 @@
-# 👨‍💻 NeuroNav Developer Guide
+# 👨‍💻 Neurofocus Developer Guide
 
 Complete technical documentation for developers.
 
@@ -95,7 +95,7 @@ npm install
 Create `backend/.env`:
 ```env
 OPENAI_API_KEY=your_openai_api_key
-MONGODB_URI=mongodb://localhost:27017/neuronav
+MONGODB_URI=mongodb://localhost:27017/neurofocus
 PORT=5000
 NODE_ENV=development
 SESSION_SECRET=your_random_32_char_secret
@@ -184,7 +184,7 @@ Hack_The_Winter/
 │       │   ├── ChatArea.js        # Chat interface
 │       │   ├── WelcomeScreen.js   # Initial setup
 │       │   ├── ResultsScreen.js   # Final results
-│       │   ├── Sidebar.js         # Navigation
+│       │   ├── Sidebar.js         # focusigation
 │       │   ├── StarField.js       # Animated background
 │       │   ├── MissionMap.js      # Progress visualization
 │       │   ├── PhaseIndicator.js  # Current phase display
@@ -294,7 +294,7 @@ Manages 6-phase conversation flow.
 | `ChatArea.js` | Chat interface | Message display, input |
 | `WelcomeScreen.js` | Initial setup | Name, age, role input |
 | `ResultsScreen.js` | Final display | Scores, PDF download |
-| `Sidebar.js` | Navigation | Phase list, progress |
+| `Sidebar.js` | focusigation | Phase list, progress |
 
 ### Visual Components
 
