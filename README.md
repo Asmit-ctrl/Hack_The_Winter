@@ -8,15 +8,13 @@
 **India's First AI-Powered ADHD Mission Control Platform**
 
 > Transforming ADHD screening from clinical questionnaires to gamified therapeutic journeys for K-12 students (ages 6-17)
-
 ---
 
-## 🌟 What is NeuroNav?
+## 🌟 What is NeuroFocus?
 
-NeuroNav is an intelligent ADHD screening platform for children aged 6-17 that uses:
+NeurozFocus is an intelligent ADHD screening platform for children aged 6-17 that uses:
 
 - **Conversational AI** (Fine-tuned GPT-3.5-turbo) for natural, adaptive assessments
-- **Gamified "Mission Control" Interface** with 6 space-themed sectors
 - **DSM-5 Clinical Scoring** for medical-grade accuracy
 - **Professional PDF Reports** to share with healthcare providers
 
@@ -67,10 +65,6 @@ NeuroNav is an intelligent ADHD screening platform for children aged 6-17 that u
 - **Focus Meter** - Real-time engagement feedback
 - **Pattern Toasts** - Non-intrusive indicator notifications
 
-### 🎮 Gamified Experience
-- 6-phase "Mission Sectors" (Introduction → Focus → Energy → Impulse → Emotions → Strengths)
-- Prism color-coding (Orange → Blue → Yellow → Red → Purple → Green)
-- Animated star field, mission maps, progress indicators
 
 ---
 
@@ -149,7 +143,7 @@ Create `backend/.env`:
 
 ```env
 OPENAI_API_KEY=your_openai_api_key
-MONGODB_URI=mongodb://localhost:27017/neuronav
+MONGODB_URI=mongodb://localhost:27017/neurofocus
 PORT=5000
 NODE_ENV=development
 SESSION_SECRET=your_random_32_char_secret
@@ -251,7 +245,7 @@ Hack_The_Winter/
 
 ## 🔬 Research Foundation
 
-NeuroNav is built on validated clinical research:
+Neurofocus is built on validated clinical research:
 
 - **Prevalence:** 12M+ Indian children affected (6-17% prevalence studies)
 - **Diagnostic Gap:** 80% of cases undiagnosed, 6+ month waitlists at NIMHANS
@@ -264,7 +258,7 @@ NeuroNav is built on validated clinical research:
 
 ## 🌍 Impact
 
-| Metric | Current State | NeuroNav Solution |
+| Metric | Current State | NeuroFocus Solution |
 |--------|---------------|-------------------|
 | **Affected** | 12M+ Indian K-12 students | Accessible screening for all |
 | **Diagnosed** | <20% (80% missed) | Early identification tool |
